@@ -14,11 +14,10 @@ class GenderController extends Controller
         ]);
 
         if ($response->failed()) {
-        return back()->with('error', 'Impossible de contacter le service distant.');
+            return back()->with('error', 'Impossible de contacter le service distant.');
         }
 
         $resultat = $response->json();
-        //var_dump($resultat);
 
         return view('gender', [
             'resultat' => $resultat
