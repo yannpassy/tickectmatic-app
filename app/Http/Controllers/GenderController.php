@@ -9,7 +9,6 @@ class GenderController extends Controller
 {
     public function check($nom)
     {
-        // 1. Appel API
         $response = Http::get("https://api.genderize.io/", [
             'name' => $nom,
         ]);
@@ -18,10 +17,9 @@ class GenderController extends Controller
         return back()->with('error', 'Impossible de contacter le service distant.');
         }
 
-        // 2. Récupération des données
         $resultat = $response->json();
+        //var_dump($resultat);
 
-        // 3. Retourner la vue avec les données
         return view('gender', [
             'resultat' => $resultat
         ]);
