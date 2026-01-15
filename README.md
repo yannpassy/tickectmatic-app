@@ -8,3 +8,5 @@ show data of the ticket for an event
 ```
 
 this request show the number of total ticket, ticket sold, ticket sold unpaid ect...
+
+![Ma démo géniale](image/ticketmatics_event.jpg)
